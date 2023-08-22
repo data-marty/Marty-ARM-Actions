@@ -1,34 +1,17 @@
 {
     "$schema": "https://schema.management.azure.com/schemas/2018-05-01/subscriptionDeploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
-    "parameters": {
-        "location": {
-            "type": "string",
-            "metadata": {
-                "description": "Enter the location to deploy the resource to"
-            },
-            "defaultValue": "Australia East"
-        },
-        "resourceGroupName": {
-            "type": "string",
-            "metadata": {
-                "description": "Enter the name for the resource group"
-            },
-            "defaultValue": "data-mart"
-        }
-    },
+    "parameters": {},
     "functions": [],
     "variables": {},
     "resources": [
         {
-            "name": "[parameters('resourceGroupName')]",
+            "name": "resourceGroup",
             "type": "Microsoft.Resources/resourceGroups",
-            "apiVersion": "2019-10-01",
-            "location": "[parameters('location')]",
-            "dependsOn": [
-            ],
-            "tags": {
-            }
+            "apiVersion": "2022-09-01",
+            "location": "Australia East",
+            "dependsOn": [],
+            "tags": {}
         }
     ],
     "outputs": {}
