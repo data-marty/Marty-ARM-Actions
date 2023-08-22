@@ -3,10 +3,10 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "location": {
-            "value": "Australia East"
+            "value": "Australia Central"
         },
         "resourceGroupName": {
-            "value": "data-marty"
+            "value": "NewGroup"
         }
     }
 }
