@@ -20,10 +20,10 @@
     "variables": {},
     "resources": [
         {
-            "name": "resourceGroup",
+            "name": "[parameters('GroupName')]",
             "type": "Microsoft.Resources/resourceGroups",
             "apiVersion": "2022-09-01",
-            "location": "eastus",
+            "location": "[parameters('Location')]",
             "dependsOn": [],
             "tags": {}
         }
