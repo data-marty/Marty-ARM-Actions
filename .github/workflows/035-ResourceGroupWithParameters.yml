@@ -1,0 +1,58 @@
+# This is a basic workflow to help you get started with Actions
+
+name: ResourceGroupWithParameters
+
+# Controls when the workflow will run
+on:
+    push:
+        branches:
+            - main
+    workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v3
+
+      - name: Azure Login
+        uses: Azure/Login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+
+      # Runs a single command using the runners shell
+      - name: Login echo command
+        run: echo "this action ashould run correctly - it uses a repository credential (brackets again)"
+
+    #preform an task with the account that you are logged on with
+      - name: Azure CLI Action
+        uses: Azure/cli@v1
+        with:
+            inlinescript: |
+                az account show
+
+    #preform an task with the account that you are logged on with
+    #  - name: Deploy Resource Group using the Azure CLI and an ARM template
+    #    uses: Azure/cli@v1
+    #    with:
+    #        inlinescript: |
+    #            az deployment sub create --location "Australia East" --template-file ./resourcegroup.json
+
+    #deploy an azure resource manager template using the template action
+      - name: Deploy Azure Resource Manager (ARM) Template using a dedicated ARM Template Action
+        uses: Azure/arm-deploy@v1
+        with:
+            scope: subscription
+            subscriptionId: 2635e25c-2d0f-4b09-ad52-1a62452a94e9
+            region: Australia East
+            template: ./resoucegroupusingparams.json
+            deploymentName: SampleDeployment
+            
+      
