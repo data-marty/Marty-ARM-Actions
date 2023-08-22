@@ -46,7 +46,7 @@ jobs:
     #            az deployment sub create --location "Australia East" --template-file ./resourcegroup.json
 
     #deploy an azure resource manager template using the template action
-      - name: Deploy Azure Resource Manager (ARM) Template
+      - name: Deploy Azure Resource Manager (ARM) Template using a dedicated ARM Template Action
         uses: Azure/arm-deploy@v1
         with:
             scope: subscription
