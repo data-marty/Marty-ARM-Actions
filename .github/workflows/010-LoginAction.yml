@@ -26,6 +26,6 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Login echo command
-        run: echo this action ashould run correctly - it uses a repository credential (brackets again)
+        run: echo "this action ashould run correctly - it uses a repository credential (brackets again)"
 
       
