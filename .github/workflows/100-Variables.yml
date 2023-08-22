@@ -47,10 +47,10 @@ jobs:
         run: |
             echo Hello, world!
             # output the environment variables
-            echo environment variable ${{ env.resoure_name}}
-            echo ${{ env.var1}}
-            echo ${{ env.var2}}
-            echo ${{ env.martin}}
+            echo environment variable is ${{ env.resoure_name}}
+            echo environment variable is${{ env.var1}}
+            echo environment variable is${{ env.var2}}
+            echo step variable is${{ env.martin}}
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
