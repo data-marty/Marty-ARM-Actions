@@ -8,7 +8,7 @@
         {
             "name": "data-marty",
             "type": "Microsoft.Resources/resourceGroups",
-            "apiVersion": "2022-09-01"
+            "apiVersion": "2022-09-01",
             "location": "Australia East",
             "dependsOn": [],
             "tags": {}
