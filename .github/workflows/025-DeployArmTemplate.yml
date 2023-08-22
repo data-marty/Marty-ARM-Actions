@@ -18,7 +18,7 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
 
       - name: Azure Login
@@ -31,8 +31,15 @@ jobs:
       - name: Login echo command
         run: echo "this action ashould run correctly - it uses a repository credential (brackets again)"
 
-      #preform an task with the account that you are logged on with
+    #preform an task with the account that you are logged on with
       - name: Azure CLI Action
+        uses: Azure/cli@v1
+        with:
+            inlinescript: |
+                az account show
+
+    #preform an task with the account that you are logged on with
+      - name: Azure CLI
         uses: Azure/cli@v1
         with:
             inlinescript: |
