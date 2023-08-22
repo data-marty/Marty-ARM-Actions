@@ -39,7 +39,7 @@ jobs:
                 az account show
 
     #preform an task with the account that you are logged on with
-      - name: Deploy Resource Group using the Azure CLI
+      - name: Deploy Resource Group using the Azure CLI and an ARM template
         uses: Azure/cli@v1
         with:
             inlinescript: |
