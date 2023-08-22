@@ -53,7 +53,9 @@ jobs:
             subscriptionId: 2635e25c-2d0f-4b09-ad52-1a62452a94e9
             region: Australia East
             template: ./resoucegroupusingparams.json
-            parameters: ./resoucegroupusingparams.parameters.json
+            parameters: 
+                location="Australia Central"
+                resourceGroupName="AnotherTest"
             deploymentName: SampleDeployment
             
       
