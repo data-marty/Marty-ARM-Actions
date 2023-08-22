@@ -6,7 +6,7 @@
     "variables": {},
     "resources": [
         {
-            "name": "data-marty",
+            "name": "resourceGroup",
             "type": "Microsoft.Resources/resourceGroups",
             "apiVersion": "2022-09-01",
             "location": "Australia East",
