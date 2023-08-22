@@ -27,5 +27,6 @@ jobs:
         run: |
           echo And this is some more text.
           echo This time on a multi line
+          echo Our next step is to log into Azure using a credential
 
       
