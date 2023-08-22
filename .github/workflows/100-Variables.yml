@@ -41,13 +41,13 @@ jobs:
       - uses: actions/checkout@v3
 
       # Print out to screen the environment variables
-      - name: Run a one-line script
+      - name: output some variables
         env:
             martin: StepVariable1
         run: |
             echo Hello, world!
             # output the environment variables
-            echo ${{ env.resoure_name}}
+            echo environment variable ${{ env.resoure_name}}
             echo ${{ env.var1}}
             echo ${{ env.var2}}
             echo ${{ env.martin}}
