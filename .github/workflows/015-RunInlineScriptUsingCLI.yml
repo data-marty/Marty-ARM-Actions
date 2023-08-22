@@ -32,5 +32,6 @@ jobs:
       - name: Azure CLI Action
         uses: Azure/cli@v1
         with:
-            inlinescript: | az account show
+            inlinescript: |
+                az account show
       
