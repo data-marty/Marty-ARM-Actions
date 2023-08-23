@@ -1,0 +1,9 @@
+Path to python install
+C:\Users\marti\AppData\Local\Programs\Python\Python311\
+python --version
+pip install pandas
+pip install pyyaml
+python.exe -m pip install --upgrade pip
+pip install --upgrade pip
+pip --version
+  
