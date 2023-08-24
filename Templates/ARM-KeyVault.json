@@ -3,7 +3,7 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "vaults_kv_martydeploy01_name": {
-            "defaultValue": "kv-martydeploy03",
+            "defaultValue": "kv-martydeploy04",
             "type": "String"
         }
     },
@@ -27,7 +27,7 @@
                 "enabledForDeployment": false,
                 "enabledForDiskEncryption": false,
                 "enabledForTemplateDeployment": true,
-                "enableSoftDelete": true,
+                "enableSoftDelete": false,
                 "softDeleteRetentionInDays": 90,
                 "enableRbacAuthorization": true,
                 "vaultUri": "[concat('https://', parameters('vaults_kv_martydeploy01_name'), '.vault.azure.net/')]",
