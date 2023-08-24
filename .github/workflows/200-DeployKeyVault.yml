@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: ResourceGroupWithParametersFile
+name: DeployKeyVault
 
 # Controls when the workflow will run
 on:
@@ -46,16 +46,26 @@ jobs:
     #            az deployment sub create --location "Australia East" --template-file ./resourcegroup.json
 
     #deploy an azure resource manager template using the template action
-      - name: Deploy Azure Resource Manager (ARM) Template using a dedicated ARM Template Action Override Parameter File
+    #   - name: Deploy Azure Resource Manager (ARM) Template using a dedicated ARM Template Action Override Parameter File
+    #     uses: Azure/arm-deploy@v1
+    #     with:
+    #         scope: subscription
+    #         subscriptionId: 2635e25c-2d0f-4b09-ad52-1a62452a94e9
+    #         region: Australia East
+    #         template: ./resoucegroupusingparams.json
+    #         parameters: 
+    #             location="Australia Central"
+    #             resourceGroupName="AnotherTest"
+    #         deploymentName: SampleDeployment
+
+    #deploy an azure resource manager template using the template action
+      - name: Deploy Azure Key Vault
         uses: Azure/arm-deploy@v1
         with:
             scope: subscription
             subscriptionId: 2635e25c-2d0f-4b09-ad52-1a62452a94e9
             region: Australia East
-            template: ./resoucegroupusingparams.json
-            parameters: 
-                location="Australia Central"
-                resourceGroupName="AnotherTest"
-            deploymentName: SampleDeployment
+            template: ./Templates/ARM-KeyVault.json
+            deploymentName: kvDeploy
             
       
