@@ -1,7 +1,6 @@
 import json
 import os
 
-
 os.system('cls') # on windows
 
 print ("Hello world")
