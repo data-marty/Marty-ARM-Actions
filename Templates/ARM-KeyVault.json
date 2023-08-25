@@ -3,7 +3,7 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "vaults_kv_martydeploy01_name": {
-            "defaultValue": "kv-martydeploy04",
+            "defaultValue": "kv-martydeploy06",
             "type": "String"
         }
     },
