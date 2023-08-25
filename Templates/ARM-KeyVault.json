@@ -3,7 +3,7 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "vaults_kv_martydeploy01_name": {
-            "defaultValue": "[concat('bitq-',uniqueString(resourceGroup().id))]",
+            "defaultValue": "[uniqueString(resourceGroup().id)]",
             "type": "String"
         }
     },
