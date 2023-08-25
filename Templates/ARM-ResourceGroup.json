@@ -31,5 +31,14 @@
             }
         }
     ],
-    "outputs": {}
+    "outputs": {
+        "outputLocation": {
+            "type": "string",
+            "value": "[parameters('location')]"
+        },
+        "outputResourceGroupName": {
+            "type": "string",
+            "value": "[parameters('resourceGroupName')]"
+        }
+    }
 }
