@@ -61,9 +61,13 @@ jobs:
             deploymentName: ResourceGroupDeploymentARM
       - run: | 
             echo ${{steps.ResourceGroupDeployment.outputs.outputLocation}}
+            echo ${{steps.ResourceGroupDeployment.outputs.outputResourceGroupName}}
       
       
       - name: Echo Outputs
-        run: echo ${{steps.ResourceGroupDeployment.outputs.outputLocation}}
+        run: |
+            echo ${{steps.ResourceGroupDeployment.outputs.outputLocation}}
+            echo ${{steps.ResourceGroupDeployment.outputs.outputResourceGroupName}}
+      
     
       
