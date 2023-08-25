@@ -3,7 +3,7 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "vaults_kv_martydeploy01_name": {
-            "value": "kv-martydeploy12"
+            "value": "[uniqueString(resourceGroup().id)]"
         }
     }
 }
