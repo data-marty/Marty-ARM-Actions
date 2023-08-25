@@ -56,8 +56,8 @@ jobs:
             template: ./Templates/ARM-ResourceGroup.json
             parameters: 
                 ./Templates/ARM-ResourceGroup.parameters.json
-                location="Australia Central"
-                resourceGroupName="AnotherTestMarty"
+                # location="Australia Central"
+                # resourceGroupName="AnotherTestMarty"
             deploymentName: ResourceGroupDeploymentARM
             deploymentMode: complete
       - run: | 
