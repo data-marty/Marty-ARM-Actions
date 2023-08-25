@@ -55,6 +55,7 @@ jobs:
             region: Australia East
             template: ./resoucegroupusingparams.json
             parameters: 
+                ./resoucegroupusingparams.parameters.json 
                 location="Australia Central"
                 resourceGroupName="AnotherTestMarty"
             deploymentName: ResourceGroupDeploymentARM
