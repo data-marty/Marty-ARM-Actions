@@ -59,6 +59,7 @@ jobs:
                 location="Australia Central"
                 resourceGroupName="AnotherTestMarty"
             deploymentName: ResourceGroupDeploymentARM
+            deploymentMode: complete
       - run: | 
             echo ${{steps.ResourceGroupDeployment.outputs.outputLocation}}
             echo ${{steps.ResourceGroupDeployment.outputs.outputResourceGroupName}}
